@@ -1,26 +1,46 @@
-document.getElementById("cadastro").addEventListener("submit", async function (e) {
-  e.preventDefault();
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
-  const dados = {
-    nome: this.nome.value,
-    tipo: this.tipo.value,
-    cpf: this.cpf.value,
-    email: this.email.value,
-    whatsapp: this.whatsapp.value,
-    endereco: this.endereco.value,
-  };
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
 
-  const resposta = await fetch("https://hook.us2.make.com/2pb32fhzkiuo90xeq816jkr7ocou9zko", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(dados)
-  });
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-  const resultado = document.getElementById("msgRetorno");
-  if (resposta.ok) {
-    resultado.innerText = "✅ Cadastro enviado com sucesso!";
-    this.reset();
-  } else {
-    resultado.innerText = "❌ Erro ao enviar. Tente novamente.";
-  }
-});
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#resultado {
+
