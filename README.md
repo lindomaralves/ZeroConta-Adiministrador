@@ -1,91 +1,56 @@
-# ZeroConta - Micro-SaaS de Cobrança e Organização Comercial
+# ZeroConta - Micro-SaaS de Gestão Comercial
 
-O **ZeroConta** é um **Micro-SaaS robusto** que resolve dores reais de **comerciantes** e **consumidores finais**, oferecendo uma solução inteligente para **cadastro, cobrança, controle de estoque e notificações automatizadas**, tudo com integração ao **Make (Integromat)**, **Google Planilhas** e canais de comunicação como **WhatsApp, SMS, E-mail e Telegram**.
+![ZeroConta Logo](https://via.placeholder.com/150x50?text=ZeroConta)
 
----
+Solução completa para gestão de cobranças, cadastro de clientes e controle comercial com integração a múltiplas plataformas.
 
-## 🧠 O que o ZeroConta entrega
+## ✨ Funcionalidades Principais
 
-### Para o Comerciante
-- Cadastro de clientes com campos personalizados conforme o tipo de operação.
-- Registro de vendas com descrição, imagem do item, data e vencimento.
-- Controle de estoque e organização financeira.
-- Envio de lembretes automáticos aos clientes.
-- Painel leve e funcional com estrutura 100% automatizada.
+- **Cadastro Inteligente** de usuários (5 perfis diferentes)
+- **Sistema de Cobrança** automatizado
+- **Controle de Estoque** integrado
+- **Notificações** via WhatsApp, SMS, E-mail
+- **Leitura** de QR Code e código de barras
+- **Reconhecimento Facial** para cadastro rápido
+- **Integração** com Make, Google Sheets, GitHub e Vercel
 
-### Para o Cliente Final (Consumidor)
-- Acesso gratuito à plataforma.
-- Histórico completo de compras com todos os detalhes.
-- Notificações com alertas de vencimento e lembretes úteis.
-- Acesso via QR Code, código de barras ou reconhecimento facial.
-- Programa de vantagens com bônus por indicações.
+## 🛠️ Tecnologias Utilizadas
 
----
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Backend**: Make (Webhooks)
+- **Armazenamento**: Google Planilhas
+- **Automação**: Make (Integromat)
+- **Hospedagem**: Vercel
+- **Controle de Versão**: GitHub
 
-## 💳 Modelo de Negócio
+## 🔗 Fluxo de Integração
 
-- **Comerciantes**: Pagam R$ 199,90/mês (com 8 dias de teste grátis).
-- **Clientes finais (consumidores)**: Uso 100% gratuito.
+1. **Formulário HTML** coleta dados do usuário
+2. **JavaScript** valida e envia via POST para Webhook
+3. **Make** recebe os dados e processa
+4. **Google Sheets** armazena as informações
+5. **Notificações** são disparadas conforme configuração
 
----
+## 📌 Campos por Tipo de Usuário
 
-## 📦 Tipos de Comerciante e Campos de Cadastro
+| Campo               | Autônomo | Peq. Porte | Médio Porte | Grande Porte | Cliente |
+|---------------------|----------|------------|-------------|--------------|---------|
+| Nome               | ✅       | ✅         | ✅          | ✅           | ✅      |
+| CPF                | ✅       | ✅         | ✅          | ✅           | ✅      |
+| WhatsApp           | ✅       |            | ✅          | ✅           | ✅      |
+| Endereço           | ✅       | ✅         | ✅          |              | ✅      |
+| MEI                |          | ✅         |             |              |         |
+| CNPJ               |          |            | ✅          | ✅           |         |
+| E-mail             |          |            | ✅          | ✅           |         |
+| CNH                |          |            |             | ✅           |         |
+| End. Comercial     |          |            |             | ✅           |         |
+| End. Residencial   |          |            |             | ✅           |         |
+| Nome do Pai        |          |            |             |              | ✅      |
+| Nome da Mãe        |          |            |             |              | ✅      |
+| WhatsApp Secundário|          |            |             |              | ✅      |
 
-### 1. Comerciante Autônomo
-✅ nome (obrigatório)  
-✅ cpf (obrigatório)  
-✅ whatsapp (obrigatório)  
-✅ endereco (obrigatório)
+## 🚀 Como Implementar
 
-### 2. Comerciante Pequeno Porte
-✅ nome (obrigatório)  
-✅ cpf (obrigatório)  
-✅ endereco (obrigatório)  
-✅ mei (obrigatório)
-
-### 3. Comerciante Médio Porte
-✅ nome  
-✅ cpf  
-✅ cnpj  
-✅ email  
-✅ whatsapp  
-✅ endereco
-
-### 4. Comerciante Grande Porte
-✅ nome  
-✅ cpf  
-✅ cnpj  
-✅ cnh  
-✅ email  
-✅ whatsapp  
-✅ endcomercial  
-✅ endresidencial
-
-### 5. Cliente Final (Consumidor)
-✅ nome  
-✅ cpf  
-✅ endereco  
-✅ whatsapp  
-✅ pai  
-✅ mae  
-✅ whatsapp2
-
----
-
-## 📈 Programa Indique e Ganhe
-
-- Cada produto comprado pode conter acréscimo de **R$ 0,50 a R$ 100,00**, definidos pelo comerciante.
-- Ao indicar **50 novos usuários reais**, o cliente fica **isento de acréscimos por 6 meses**.
-
----
-
-## ⚙️ Automação via Make
-
-O ZeroConta utiliza:
-- **Webhook (Custom Webhook)**
-- **Google Sheets** (armazenamento)
-- **Notificações**: WhatsApp, SMS, E-mail, Telegram
-- **Leitura**: QR Code, código de barras, reconhecimento facial
-
-Webhook oficial do cenário:  
-# ZeroConta-Adiministrador
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/zeroconta.git
